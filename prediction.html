@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="prediction.css">
+    <link rel="stylesheet" href="model.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Fingerprint</title>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="upward"><a href="model.html">Model</a></li>
+            <li class="forward"><a href="dataset.html">Dataset</a></li>
+            <li class="forward"><a href="prediction.html">Prediction</a></li>
+        </ul>
+        <div class="dropdown nav-links">
+            <button class="dropbtn"> <i class="fa-solid fa-bars"></i> Menu</button>
+            <ul class="dropdown-content">
+                <li><a href="index.html">Home</a></li>
+                <li class="upward"><a href="model.html">Model</a></li>
+                <li class="forward"><a href="dataset.html">Dataset</a></li>
+                <li class="forward"><a href="prediction.html">Prediction</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Model description -->
+    <div class="predict-description">
+        <div class="inner-div">
+            <h1>Prediction</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus in quia? A repudiandae eaque alias saepe aliquam, nihil laudantium odio distinctio in, rem cum eos deleniti nemo sit magni.</p>
+        </div>
+    </div>
+    <!--                    -->
+
+
+     <div class="center">
+      <div class="form-input">
+        <div class="preview">
+          <img id="file-ip-1-preview">
+        </div>
+        <label for="file-ip-1">Upload Image</label>
+        <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

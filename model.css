@@ -1,4 +1,4 @@
-/* model */
+/*------------------------------------------------------ Model ----------------------------------------------------*/
 @import url(//fonts.googleapis.com/css?family=Kaushan+Script);
 @import url(//fonts.googleapis.com/css?family=Bitter);
 
@@ -181,4 +181,24 @@ figure {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/*------------------------------------------------------ Dataset ----------------------------------------------------*/
+.online_dataset{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9BBEC8;
+}
+
+.our_dataset{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: center;
 }

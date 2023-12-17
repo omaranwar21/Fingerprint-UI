@@ -1,3 +1,16 @@
+/* nav bar */
+/* Add this to the existing styles.css */
+
+#navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
 /*create root*/
 :root {
   --nav-color: #DDF2FD;
@@ -284,19 +297,20 @@ body {
 }
 
 .cardImg {
-  width: 31px;
-  height: 31px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
 }
 
 .cardImgContainer {
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  border-top-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 5px;
+  border-left-width: 5px;
   border-top-style: solid;
   border-right-style: solid;
   border-bottom-style: solid;
@@ -341,7 +355,7 @@ body {
 }
 
 .text-blk.cardSubHeading {
-  color: rgb(153, 153, 153);
+  color: rgb(83 83 83);
   line-height: 22px;
 }
 
