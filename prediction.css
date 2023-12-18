@@ -53,3 +53,59 @@ body {
 
   margin-bottom:30px;
 }
+
+/*----------------------------------------------------- Results -----------------------------------------------------*/
+/*============= Image Result Column =============*/
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  height: 600px;
+}
+
+
+.box{
+	background: #fff;
+	display: inline-block;
+	padding: 8% 20px;
+	height: 500px;
+	width: 400px;
+	margin: 1rem;
+}
+
+.B_5{
+	border: 5px solid rgba(27, 79, 114, 0.4);
+	border-radius: 5px;
+}
+
+.B_5{
+	box-shadow: 0 0 1rem 0 rgba(0,0,0,0.3);
+}
+.box:hover{
+	box-shadow: 0 0 35px 20px rgba(79,69,66,0.2);
+}
+
+*{
+	font-family: 'Baloo Bhaina', cursive;
+	font-size: 20px;
+	text-align: center;
+}
+
+
+/*============= Written Result Column =============*/
+.sub-column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+
+/*
+.sub-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
