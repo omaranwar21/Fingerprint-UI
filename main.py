@@ -99,6 +99,6 @@ def minext(path):
     cv2.imwrite('extracted_image.jpg', res1)
 
 
-if __name__ == '__main__':
-    Run("F_L3C.jpg")
-    minext("Application_enhance.jpg")
+# if __name__ == '__main__':
+#     Run("F_L3C.jpg")
+#     minext("Application_enhance.jpg")

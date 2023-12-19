@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Fingerprint</title>
+</head>
+
+<body>
+
+  <div id="navbar">
+    <ul class="nav-links">
+      <h1 class="logo_nav">Fingerprinto</h1>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li class="upward"><a href="{{ url_for('model') }}">Model</a></li>
+      <li class="forward"><a href="{{ url_for('dataset') }}">Dataset</a></li>
+      <li class="forward"><a href="{{ url_for('prediction') }}">Prediction</a></li>
+    </ul>
+    <div class="dropdown nav-links">
+      <button class="dropbtn"> <i class="fa-solid fa-bars"></i> Menu</button>
+      <ul class="dropdown-content">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li class="upward"><a href="{{ url_for('model') }}">Model</a></li>
+        <li class="forward"><a href="{{ url_for('dataset') }}">Dataset</a></li>
+        <li class="forward"><a href="{{ url_for('prediction') }}">Prediction</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="header-section">
+    <img alt = '' src="../static/images/fps.jpg"
+      style="height: 200px; width:500px; border-radius: 10px; margin-bottom: 40px; margin-top: 50px;">
+    <div class="inner-div">
+      <h1>About Application</h1>
+      <p>This application is used to find out the owner of the fingerprint, predicting whether the owner of the finger
+        is male or female, and also predicting whether this is the finger of his right or left hand and the name of this
+        finger on the hand.</p>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="responsive-container-block bigContainer">
+      <div class="responsive-container-block Container">
+        <div class="imgContainer">
+          <img alt = '' class="blueDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw3.svg">
+          <img alt = '' class="mainImg" src="../static/images/fp.png">
+        </div>
+        <div class="responsive-container-block textSide">
+          <p class="text-blk heading">
+            About Fingerprint
+          </p>
+          <p class="text-blk subHeading">
+            Fingerprints, the unique patterns formed by ridges on our fingertips, serve as nature's personalized
+            identification system, forever linking us to our individuality and leaving an indelible mark on the world of
+            forensic science.
+          </p>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+            <div class="cardImgContainer">
+              <img alt = '' class="cardImg" src="../static/images/mp.jpg">
+            </div>
+            <div class="cardText">
+              <p class="text-blk cardHeading">
+                Minutiae Points
+              </p>
+              <p class="text-blk cardSubHeading">
+                The features resulting mainly from ridge endings and bifurcations.
+              </p>
+            </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+            <div class="cardImgContainer">
+              <img alt = ''class="cardImg" src="../static/images/r.jpg">
+            </div>
+            <div class="cardText">
+              <p class="text-blk cardHeading">
+                Ridge Patterns
+              </p>
+              <p class="text-blk cardSubHeading">
+                Contribute to the distinctiveness of individual fingerprints.
+              </p>
+            </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+            <div class="cardImgContainer">
+              <img alt = ''class="cardImg" src="../static/images/c.jpg">
+            </div>
+            <div class="cardText">
+              <p class="text-blk cardHeading">
+                Core
+              </p>
+              <p class="text-blk cardSubHeading">
+                Central reference point that defines the internal structure of a fingerprint.
+              </p>
+            </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+            <div class="cardImgContainer">
+              <img alt = ''class="cardImg" src="../static/images/d.jpg">
+            </div>
+            <div class="cardText">
+              <p class="text-blk cardHeading">
+                Delta
+              </p>
+              <p class="text-blk cardSubHeading">
+                Specific point in a fingerprint where ridges diverge.
+              </p>
+            </div>
+          </div>
+          <!--              <a>-->
+          <!--                <button class="explore">-->
+          <!--                  Explore our jhj-->
+          <!--                </button>-->
+          <!--              </a>-->
+        </div>
+        <img alt = '' class="redDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/cw3.svg">
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/script.js"></script>
+</body>
+
+</html>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="model.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='model.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Fingerprint</title>
 </head>
 
@@ -14,18 +14,18 @@
 
     <div id="navbar">
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="upward"><a href="model.html">Model</a></li>
-            <li class="forward"><a href="dataset.html">Dataset</a></li>
-            <li class="forward"><a href="prediction.html">Prediction</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="upward"><a href="{{ url_for('model') }}">Model</a></li>
+            <li class="forward"><a href="{{ url_for('dataset') }}">Dataset</a></li>
+            <li class="forward"><a href="{{ url_for('prediction') }}">Prediction</a></li>
         </ul>
         <div class="dropdown nav-links">
             <button class="dropbtn"> <i class="fa-solid fa-bars"></i> Menu</button>
             <ul class="dropdown-content">
-                <li><a href="index.html">Home</a></li>
-                <li class="upward"><a href="model.html">Model</a></li>
-                <li class="forward"><a href="dataset.html">Dataset</a></li>
-                <li class="forward"><a href="prediction.html">Prediction</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="upward"><a href="{{ url_for('model') }}">Model</a></li>
+                <li class="forward"><a href="{{ url_for('dataset') }}">Dataset</a></li>
+                <li class="forward"><a href="{{ url_for('prediction') }}">Prediction</a></li>
             </ul>
         </div>
     </div>
@@ -34,7 +34,8 @@
     <div class="model-description">
         <div class="inner-div">
             <h1>Model</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus in quia? A repudiandae eaque alias saepe aliquam, nihil laudantium odio distinctio in, rem cum eos deleniti nemo sit magni.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus in quia? A repudiandae eaque alias
+                saepe aliquam, nihil laudantium odio distinctio in, rem cum eos deleniti nemo sit magni.</p>
         </div>
     </div>
     <!--                    -->
