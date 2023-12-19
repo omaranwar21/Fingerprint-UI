@@ -110,3 +110,9 @@ body {
   clear: both;
 }
 */
+
+.predict{
+  background-color: rgba(0, 0, 200, 0.1);
+  border-radius: 10px;
+  margin 10px;
+}
