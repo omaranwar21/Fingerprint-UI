@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, send_file
 from PIL import Image
-# from main import *
+from main import *
 
 app = Flask(__name__)
 
@@ -25,12 +25,15 @@ def processing():
 # existing_image = Image.open("existing_image.jpg")
 
 # Save the image with a new name or format
-    uploaded_file.save("new_image.png")  # You can change the file format and file name as needed
+    uploaded_file.save("input.jpg")  # You can change the file format and file name as needed
 
     # print(uploaded_file)
 
     # Process the image (replace this with your actual processing logic)
-    # Run("F_L3C.jpg")
+    Run("input.jpg")
+    minext("Application_enhance.jpg")
+    # return
+    return send_file("extracted_image.jpg", mimetype='image/jpeg')
 
 @app.route('/dataset')
 def dataset():

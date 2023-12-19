@@ -12,11 +12,11 @@ body {
 }
 
 .center {
-  height:60%;
+  height:auto;
   display:flex;
   align-items:center;
   justify-content:center;
-
+  padding-bottom: 10vh;
 }
 .form-input {
   width:350px;

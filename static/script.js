@@ -41,7 +41,24 @@ function processImage(file) {
   fetch('/processing', {
     method: 'POST',
     body: formData
-  });
+  }).then(response => response.blob())
+            .then(blob => {
+                // Create a new image element
+                var img = document.createElement('img');
+                // Set the source of the image to the received blob
+                img.src = URL.createObjectURL(blob);
+
+                // Append the image to the resultImageContainer
+                document.getElementById('result-container').innerHTML = '';
+                document.getElementById('result-container').appendChild(img);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+//  var result = document.getElementById("result");
+//  result.src = "../Application_enhance.jpg";
+//    result.src = ;
   // .then(response => response.json())
   // .then(data => {
   //     // Update the HTML elements with the processed information
