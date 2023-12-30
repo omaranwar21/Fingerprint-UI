@@ -1,95 +1,44 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='prediction.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='model.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Fingerprint</title>
+  <title>Image Classification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
+    
 
-    <div id="navbar">
-        <ul class="nav-links">
-            <h1 class="logo_nav">Fingerprinto</h1>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li class="upward"><a href="{{ url_for('model') }}">Model</a></li>
-            <li class="forward"><a href="{{ url_for('dataset') }}">Dataset</a></li>
-            <li class="forward"><a href="{{ url_for('prediction') }}">Prediction</a></li>
-        </ul>
-        <div class="dropdown nav-links">
-            <button class="dropbtn"> <i class="fa-solid fa-bars"></i> Menu</button>
-            <ul class="dropdown-content">
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li class="upward"><a href="{{ url_for('model') }}">Model</a></li>
-                <li class="forward"><a href="{{ url_for('dataset') }}">Dataset</a></li>
-                <li class="forward"><a href="{{ url_for('prediction') }}">Prediction</a></li>
-            </ul>
-        </div>
+<div class="container">
+  <h1 class="jumbotron bg-primary">Image Classfication</h1>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Upload Your Image :</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+      </div>
     </div>
 
-    <!-- Model description -->
-    <div class="predict-description">
-        <div class="inner-div">
-            <h1>Prediction</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus in quia? A repudiandae eaque alias
-                saepe aliquam, nihil laudantium odio distinctio in, rem cum eos deleniti nemo sit magni.</p>
-        </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
     </div>
-    <!--                    -->
+  </form>
 
+  <img src="{{img_path}}" height="400px" width="400px">
+	<h2> Your Prediction   : <i> {{prediction}} </i></h2>
+    <h2> hand Prediction   : <i> {{hand_pred}} </i></h2> 
+    <h2> name Prediction   : <i> {{name_pred}} </i></h2> 
 
-    <div class="center">
-        <div class="form-input">
-            <div class="preview">
-                <img alt = "" id="file-ip-1-preview">
-            </div>
-            <label for="file-ip-1">Upload Image</label>
-            <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event)">
+</div>
 
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="column" style="background-color: #9BBEC8;">
-            <div class="predict">
-                <h2 class="head">Gender</h2>
-                <p class="sub-head">Female</p>
-            </div>
-
-            <div class="predict">
-                <h2 class="head">Right/Left</h2>
-                <p class="sub-head">Right</p>
-            </div>
-
-            <div class="predict">
-                <h2 class="head">Finger Name</h2>
-                <p class="sub-head">Index</p>
-            </div>
-            <!--            <div class="sub-row">-->
-            <!--                  <div class="sub-column" style="background-color: blue;">klfkwf</div>-->
-            <!--                  <div class="sub-column" style="background-color: white;">fwwfw</div>-->
-            <!--                  <div class="sub-column" style="background-color: green;">wfwf</div>-->
-            <!--            </div>-->
-        </div>
-
-        <div class="column" style="background-color: #9BBEC8;">
-            <div class="box B_5" id="result-container">
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <script src="../static/script.js"></script>
 
 </body>
-
 </html>

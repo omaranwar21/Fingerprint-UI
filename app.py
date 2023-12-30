@@ -1,20 +1,31 @@
 from flask import Flask, render_template, request, send_file
 from PIL import Image
 from main import *
+import classifier_fingerprint as FR
+import hand_classifier as HC
+import name_classifier as NC
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')  
+ 
+@app.route("/", methods=['GET', 'POST'])
+def main():
+	return render_template("prediction.html")
 
 @app.route('/model')
 def model():
     return render_template('model.html') 
  
-@app.route('/prediction')
+@app.route("/submit", methods = ['GET', 'POST'])
 def prediction():
-    return render_template('prediction.html') 
+    if request.method == 'POST':
+        img = request.files['my_image']
+        img_path = "static/" + img.filename	
+        img.save(img_path)
+        gender_pred = FR.prediction(img_path)
+        hand_pred = HC.Hand_prediction(img_path)
+        name_pred = NC.Name_prediction(img_path)
+    return render_template('prediction.html', prediction = gender_pred,hand_pred=hand_pred,name_pred=name_pred, img_path = img_path) 
 
 @app.route('/processing', methods=['POST'])
 def processing():
